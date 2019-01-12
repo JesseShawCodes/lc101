@@ -1,12 +1,11 @@
-from string import ascii_lowercase
+from test import testEqual
 
-LETTERS = {letter: str(index) for index, letter in enumerate(ascii_lowercase, start=1)} 
+def remove(substr,original_string):
+    return "Testing"
+    # your code here
 
-def alphabet_position(text):
-    text = text.lower()
-
-    numbers = [LETTERS[character] for character in text if character in LETTERS]
-
-    return int(' '.join(numbers)) + 13
-
-print(alphabet_position("a"))
+testEqual(remove('an', 'banana'), 'bana')
+testEqual(remove('cyc', 'bicycle'), 'bile')
+testEqual(remove('iss', 'Mississippi'), 'Missippi')
+testEqual(remove('egg', 'bicycle'), 'bicycle')
+testEqual(remove('oo', 'Yahoohoo'), 'Yahhoo')
